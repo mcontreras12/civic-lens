@@ -1,10 +1,62 @@
-/* CSS by ///ADD/// YOUR NAME */
+/* CSS by Mariluz Contreras*/
 
 /* Imported Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* ///ADD/// CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /* Root Variables */
 :root {
@@ -39,27 +91,268 @@ body.dark-mode {
 }
 
 /* ///ADD/// Skip Link Styles */
+.skip-link {
+  position: absolute;
+  text-decoration: none;
+  transform: translateY(-400%);
+  padding: 2px;
+  left: 50%;
+  font-weight: 600;
+  color: var(--news-flash);
+}
+
+.skip-link:focus {
+  transform: translateY(-200%);
+}
+
+.skip-link {
+  transition: var(--transition);
+}
 
 /* ///ADD/// Navigation Styles */
+.mobile-nav, .mobile-header {
+  background: var(--blue-bulletin);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;
+}
+
+.mobile-header, .mobile-header p {
+  color: white;
+}
+
+.mobile-header h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: var(--font-heading);
+}
+
+.mobile-header p {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+ 
+}
+
+.mobile-nav .menu {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.mobile-nav .menu li a {
+  display: block;              
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;      
+  background: var(--news-flash);  
+  color: #fff;   
+  text-decoration: none;
+  font-weight: 500;         
+  text-align: center;         
+  cursor: pointer;  
+  font-family: var(--font-body);   
+  font-size: 22px;    
+}
+
+.mobile-nav .menu li a:hover {
+  background: #333;
+}
+
+.menu-button {
+  display: none;
+}
+
 
 /* ///ADD/// Global Layout Styles */
 
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: var(--watchdog-white);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--truth-text);
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--truth-text);
+  font-size: 1.3rem;
+  font-weight: 350;
+  word-spacing: .3rem;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  text-align: center;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#federal, #voter {
+  background: var(--news-flash);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid black;
+
+}
+
+#federal h3, #voter h3 {
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+#federal p, #voter p {
+  color: white;
+  font-size: 1rem;
+}
+
+video {
+  width: 100%;
+
+}
+
+#featured-articles article {
+  background: var(--watchdog-white);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid black;
+  width: 300px;
+  display: grid;
+}
+#featured-articles h3 {
+  border-bottom: 1px solid black;
+}
+
+form {
+  background-color: var(--news-flash);
+  color: white;
+  width: 900px;
+  display: block;
+  border: 1px solid black;
+}
+
+input, label, fieldset {
+  display: block;
+  width: 95%;
+}
+
+label {
+  padding-left: 0.5rem;
+  margin: 0.75em 0 0.25em 0;
+}
+
+input {
+  font-size: 1em;
+  padding: 0.25em 0.5em;
+  border: 1px solid black;
+  width: 20px;
+}
+
+
+
 /* ///ADD/// Global Text Styles */
 
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 1rem;
+}
 
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+
+p, label, li {
+  font-family: var(--font-body);
+}
+
+label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+input[type="text"], input[type="tel"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background: var(--news-flash);
+  width: 35%;
+  height: auto;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: var(--transition);
+}
+
+button[type="submit"]:hover {
+  background: #c62832;
+}
 /* ///ADD/// medium styles 620px */
-
+@media (min-width: 620px) {
+  main {
+    max-width: 700px;
+  }
+}
 
 /* ///ADD/// large styles 920px */
-
+@media (min-width: 920px) {
+  .menu {
+    display: flex;
+    gap: 2rem;
+  }
+  .menu-button {
+    display: none;
+  }
+}
 
 /* ///ADD/// x-large styles 1024px */
-
+@media (min-width: 1024px) {
+  main {
+    max-width: 1100px;
+  }
+}
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
 
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+    animation: none;
+  }
+}
+
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-
+  nav:has(#menu-toggle:checked) {
+    background: var(--story-subtitle)
+  }
 }
